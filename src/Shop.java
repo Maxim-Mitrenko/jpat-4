@@ -62,4 +62,13 @@ public class Shop implements SellItems, Curt, Calculator, PayService, SellersSer
     public void buy() {
         pay(calculate(get()));
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < items.size(); i++) {
+            sb.append((i + 1) + ". " + items.get(i) + "\n");
+        }
+        return sb.toString();
+    }
 }

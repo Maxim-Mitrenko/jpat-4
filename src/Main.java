@@ -16,15 +16,12 @@ public class Main {
                 if (input == 4) break;
                 switch (input) {
                     case 1 -> {
-                        List<Item> itemList = shop.getItems();
-                        for (int i = 0; i < itemList.size(); i++) {
-                            System.out.println((i + 1) + ". " + itemList.get(i));
-                        }
+                        System.out.println(shop);
                         System.out.println("Введите номер товара");
                         int number = input(scanner);
                         System.out.println("Введите количество товара");
                         int count = input(scanner);
-                        shop.add(itemList.get(number - 1), count);
+                        shop.add(shop.getItems().get(number - 1), count);
                         System.out.println("Товар добавлен в корзину!");
                     }
                     case 2 -> {
